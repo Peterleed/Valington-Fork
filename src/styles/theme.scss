@@ -1,0 +1,23 @@
+$font1: "Nunito Sans",
+sans-serif;
+$font2: "Merriweather",
+serif;
+$red-color: #d6292d;
+$light-brown-color: #d19f80;
+$text-color-brown: #3e2f26;
+$text-color-white: #fff;
+$text-color-green: #009052;
+$text-color-black: #000;
+$background-color-brown: #d3a386;
+
+:export {
+    font1: $font1;
+    font2: $font2;
+    red-color: $red-color;
+    light-brown-color: $light-brown-color;
+    text-color-black: $text-color-black;
+    text-color-white: $text-color-white;
+    text-color-green: $text-color-green;
+    text-color-brown: $text-color-brown;
+    background-color-brown: $background-color-brown;
+}

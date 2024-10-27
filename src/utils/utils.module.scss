@@ -1,0 +1,195 @@
+@import "../../src/styles/mixins";
+@import "../../src/styles/theme";
+
+.propertiesCard {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+
+    img {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &:hover {
+        .top {
+            img {
+                    transform: scale(1.1);
+                }
+            
+                .gradient {
+                    opacity: 0.5;
+                }
+        }
+    }
+
+    .top {
+        height: 60%;
+        position: relative;
+        overflow: hidden;
+
+        .gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .icons ul {
+            @include flex ($gap: 10px, $justify-content: flex-start);
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            li p {
+                color: white;
+                position: relative;
+                cursor: pointer;
+                font-size: 16px;
+                z-index: 1;
+                span {
+                    visibility: hidden;
+                        width: 50px;
+                        background-color: #333;
+                        color: #fff;
+                        text-align: center;
+                        border-radius: 6px;
+                        padding: 5px;
+                        position: absolute;
+                        z-index: 1;
+                        bottom: 150%;
+                        left: 50%;
+                        margin-left: -25px;
+                        font-size: 10px;
+                        
+                        &::after {
+                            content: "";
+                                position: absolute;
+                                top: 100%;
+                                left: 50%;
+                                margin-left: -5px;
+                                border-width: 5px;
+                                border-style: solid;
+                                border-color: #333 transparent transparent transparent;
+                        }
+                }
+
+                &:hover {
+                    color: $text-color-green;
+                    span {
+                            visibility: visible;
+                        }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        height: 40%;
+        padding: 15px;
+        background-color: white;
+
+        @include flex ($flex-direction: column, $justify-content: flex-start, $align-items: flex-start, $gap: 10px);
+
+        h3 {
+            font-size: 1.3rem;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: $text-color-green;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .first {
+            @include flex($gap: 10px);
+            color: gray;
+
+            span {
+                @include flex($gap: 3px);
+
+                &:last-child {
+                    gap: 0px;
+                }
+            }
+        }
+    }
+}
+
+.Card {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    padding: 40px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+    @include flex ($flex-direction: column, $align-items: center, $justify-content: flex-end, $gap: 15px);
+
+    @include tablet {
+        height: 350px;
+    }
+    
+        @include mobile {
+            height: 400px;
+        }
+    
+    p {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .first {
+        font-size: 28px !important;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .second {
+        background-color: $text-color-green;
+        width: max-content;
+        font-weight: 700;
+        padding: 0 10px;
+        border-radius: 2px;
+        font-size: 15px !important;
+        z-index: 1;
+    }
+
+    img {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        cursor: pointer;
+    }
+
+    .gradient {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        transition: opacity 0.25s ease-in-out;
+        cursor: pointer;
+    }
+
+    &:hover {
+       .gradient {
+            opacity: 0.4;
+        }
+    }
+}

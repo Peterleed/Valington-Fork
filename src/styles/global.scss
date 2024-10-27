@@ -1,0 +1,58 @@
+@import "./mixins";
+@import "./theme";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: $font2;
+}
+
+h2, h3, p, a {
+    font-family: $font1
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+
+    h1 {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: $font2;
+    }
+
+    h3 {
+        font-family: $font1;
+        color: blue;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        background-color: $red-color;
+        color: $text-color-white;
+        border: none;
+        border-radius: 1rem;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
