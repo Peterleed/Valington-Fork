@@ -17,7 +17,13 @@ const Hero = () => {
         HOMES & <br />
         PROPERTIES
       </h1>
-      <video src="/herovideo.mp4" autoPlay muted playsInline loop></video>
+      <video
+        src="/herovideo.mp4"
+        autoPlay={true}
+        muted
+        playsInline
+        loop
+      ></video>
       <div className={styles.gradient}></div>
 
       <div className={styles.btns}>
