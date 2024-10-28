@@ -204,7 +204,7 @@
                     }
                     
                         @include mobile {
-                            height: 480px;
+                            height: max-content;
                         }
 
                     .top {
